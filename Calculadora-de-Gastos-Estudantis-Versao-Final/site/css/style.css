@@ -1,0 +1,564 @@
+
+
+.mensagem-de-boas-vindas-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; 
+    animation: forwards;
+    animation-duration: 1s;
+    
+}
+
+.mensagem-de-boas-vindas {
+    background-color: #109BD7; 
+    padding: 20px; 
+    text-align: center;
+    border-radius: 20px;
+
+}
+
+
+
+.mensagem-de-boas-vindas h3,
+.mensagem-de-boas-vindas p {
+    font-size: 36px; /* Tamanho da fonte desejado */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+/**boot css**/
+
+img{
+    width: 100%;
+    max-width: 500px;
+    
+}
+.center{
+    max-width: 1280px;
+    padding:0 2%;
+    margin:0 auto;
+}
+
+.center1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #004A90;
+    padding: 20px;
+    border-radius: 10px;
+    transition-duration: 1s;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.323);
+}
+
+.center1:hover{
+    transform: scale(1.05);
+}
+
+.center0{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #004A90;
+    padding: 20px;
+    border-radius: 30px;
+    transition-duration: 1s;
+    margin-top: -250px;
+    margin-bottom: 50px;
+}
+
+.center0:hover{
+    transform: scale(1.05);
+}
+
+.w33{
+    width: 33.3%;
+}
+
+.w50{
+    /* padding: 0 2%; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+
+/** ESTILIZAÇÃO **/
+header{
+    padding:20px 0;
+    background: #3D437A;
+}
+header .logo{
+    font-size: 23px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+}
+.mobile{
+    display: none;
+}
+nav.desktop ul{
+    position: relative;
+    top: 5px;
+    list-style-type: none;
+}
+
+nav.desktop li{
+    font-weight: 300;
+    font-size: 15px;
+    padding:0 30px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav.desktop a{
+    color: white;
+    text-decoration: none;
+}
+
+.banner-principal{
+    width: 100%;
+    height:900px;
+    background-image: url('../images/unini.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(51,51,51,0.5);
+}
+
+section.banner-principal form{
+    width: 93%;
+    max-width: 600px;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+section.banner-principal form h2{
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+}
+section.banner-principal form input[type=text]{
+    width: 100%;
+    height: 66px;
+    margin-top: 10px;
+    background: white;
+    color: #333;
+    font-size: 22px;
+    padding-left: 10px;
+}
+section.banner-principal form input[type=submit]{
+    width: 100%;
+    height: 66px;
+    margin-top: 10px;
+    background: #00c59e;
+    color: rgba(160, 160, 160, 0.452);
+    cursor: pointer;
+    font-size: 22px;
+    padding-left: 10px;
+    border: 0;
+}
+section.operacoes0 {
+    background-color: linear-gradient(90deg, #FFFFFF, #109BD7, #0531FE);
+    padding: 300px;
+    
+}
+section.operacoes span {
+    color: #00c59e;
+}
+section.operacoes1{
+    background-color: #7a7a7a;
+    padding: 200px 0;
+}
+
+section.operacoes1 h2{
+    font-size: 35px;
+    padding: 25%;
+    padding-top: 0%;
+    padding-bottom: 5%;
+    font-weight: 300;
+    color: white;
+    box-shadow: 4px 4px 4px 4px, black;
+}
+section.operacoes1 p{
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+}
+
+section.operacoes2{
+    background-color: #a3a3a3;
+    padding: 200px 0;
+}
+section.operacoes2 h2{
+    font-size: 25px;
+    font-weight: 300;
+    color: white;
+}
+section.operacoes2 p{
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    nav.desktop{
+        display: none;
+    }
+    nav.mobile{
+        display: block;
+    }
+
+    .botao-menu-mobile{
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+
+    nav.mobile ul{
+        top: 55px;
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+    nav.mobile li{
+        font-weight: 300;
+        width: 100%;
+        display: block;
+        font-size: 17px;
+        border-bottom: 1px solid #ccc;
+        background: white;
+        padding: 8px 0;
+    }
+    nav.mobile li a{
+        display: block;
+        color: #444;
+        text-decoration: none;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    img{
+        float: none !important;
+        display: block;
+        margin:0 auto;
+
+    }
+    .w50{
+        padding: 20px;
+        width: 100%
+    }
+}
+/** estilizacao da box da calculadora **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root {
+    --linear-gradient: linear-gradient(90deg, #FFFFFF, #109BD7, #0531FE);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+#nome{
+    border-radius: 10px;
+    transition-duration: 1s;
+}
+#nome:hover{
+    transform: scale(1.05);
+}
+
+#acao{
+    border-radius: 10px;
+    transition-duration: 1s;
+    background-color: #6f6f6f;
+}
+
+#acao:hover{
+    transform: scale(1.05);
+
+}
+
+#container {
+    width: 10000%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--linear-gradient);
+    color: #004A90;
+}
+
+#calculator {
+    background-color: rgb(221 227 253);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition-duration: 1s;
+}
+
+#calculator:hover {
+    background-color: #004A90; 
+}
+
+#calculator h2 {
+    font-size: 30px;
+    position: relative;
+}
+
+#calculator h2::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 150px;
+    /* background: var(--linear-gradient); */
+    bottom: 5px;
+}
+
+#input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-field label {
+    font-size:28px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    outline: #000000;
+    border-bottom: 1px solid #2a44b6;
+    color: #000000;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#total {
+    font-size: 50px;
+}
+
+#calculate {
+    background-image: linear-gradient(#3f2c2c,#0048ff);
+    border: ridge;
+    padding: 5px;
+    color: black;
+    width: 150%;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 1s;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.323);
+}
+
+#calculate:hover {
+   transform: scale(1.05);
+   background-color: rgb(126, 126, 126);
+   color: black;
+}
+
+/** estilizacao da box da calculadora **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root {
+    --linear-gradient: linear-gradient(90deg, #FFFFFF, #109BD7, #0531FE);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+#nome{
+    border-radius: 10px;
+    transition-duration: 1s;
+}
+#nome:hover{
+    transform: scale(1.05);
+}
+
+#acao{
+    border-radius: 10px;
+    transition-duration: 1s;
+    background-color: #6f6f6f;
+}
+
+#acao:hover{
+    transform: scale(1.05);
+
+}
+
+#container {
+    width: 10000%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--linear-gradient);
+    color: #004A90;
+}
+
+#calculator {
+    background-color: rgb(221 227 253);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition-duration: 1s;
+}
+
+#calculator:hover {
+    background-color: #004A90; 
+}
+
+#calculator h2 {
+    font-size: 30px;
+    position: relative;
+}
+
+#calculator h2::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 150px;
+    /* background: var(--linear-gradient); */
+    bottom: 5px;
+}
+
+#input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-field label {
+    font-size:28px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    outline: #000000;
+    border-bottom: 1px solid #2a44b6;
+    color: #000000;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#total {
+    font-size: 50px;
+}
+
+#calculate {
+    background-image: linear-gradient(#f8f8f8,#0048ff);
+    border: ridge;
+    padding: 5px;
+    color: black;
+    width: 150%;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 1s;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.323);
+}
+
+#calculate:hover {
+   transform: scale(1.05);
+   background-color: rgb(126, 126, 126);
+   color: black;
+}

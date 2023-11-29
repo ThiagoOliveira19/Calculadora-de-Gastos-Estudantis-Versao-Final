@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Projeto 01</title>
+    <link href="fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/calculadora.css">
+    <script type="text/javascript" src="js/script.js"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <meta name="keywords" content="palavras-chave,do,meu,site">
+    <meta name="description" content="Descrição do meu website">
+    <meta charset="utf-8">
+     
+
+</head>
+
+<body>
+    <header>
+        <div class="center">
+            <a href="https://unidesc.edu.br/">
+            <div class="logo left">UNIDESC</div><!--logo-->
+            </a>
+            <nav class="desktop right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Serviços</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile right">
+                <div class="botao-menu-mobile">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Serviços</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </div><!--center-->
+    </header>
+
+    <section class="banner-principal">
+        <div class="overlay"></div><!--overlay-->
+        <div class="center">
+            <form id="meuForm" action="#">
+                <h2>Qual é o seu melhor nome?</h2>
+                <input type="text" id="nome" name="Seu nome" required>
+                <input type="submit" name="acao" value="Enviar">
+            </form>
+        
+            <!-- Mensagem de boas-vindas (inicialmente oculta) -->
+            <div class="mensagem-de-boas-vindas" style="display: none;">
+                <h3>Bem-vindo(a) <span id="nome-na-mensagem"></span> ao nosso site!</h3>
+                <p>Obrigado por preencher o formulário. Estamos felizes em tê-lo(a) conosco.</p>
+            </div>
+        
+            <script>
+                document.getElementById("meuForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Impede o envio do formulário
+        
+                    const nome = document.getElementById("nome").value;
+                    document.getElementById("nome-na-mensagem").textContent = nome;
+        
+                    // Exibe a mensagem de boas-vindas após o envio do formulário
+                    document.querySelector(".mensagem-de-boas-vindas").style.display = "block";
+                });
+            </script>
+        </div><!--center-->
+    </section><!--banner-principal-->
+
+    <section class="operacoes0">
+        <div class="center">
+            <div class="w50 left">
+                <div id="calculator">
+                    <h2>Calculadora de mensalidades</h2>
+                </div> <!--box-calculator-->
+
+                <div id="input-box">
+                    <div class="input-field">
+                        <label for="value">Valor das mensalidades (parcelas):</label>
+                        <input type="number" name="" id="value">
+                    </div><!--value-->
+
+                    <div class="input-field">
+                        <label for="fee">taxa de juros ao ano das parcelas</label>
+                        <input type="number" name="" id="fee">
+                    </div><!--fee-->
+
+                    <div class="input-field">
+                        <label for="time">Qual semestre está?</label>
+                        <input type="number" name="" id="time">
+                       
+                    </div><!--time-->
+                </div> <!--input-box-->
+                <div id="resultado"></div>
+
+                <script>
+                    function calcularMensalidade() {
+            // Obter os valores dos campos de entrada
+            var valorMensalidades = parseFloat(document.getElementById('value').value);
+            var taxaJuros = parseFloat(document.getElementById('fee').value);
+            var semestre = parseInt(document.getElementById('time').value);
+
+            // Realizar algum cálculo com os valores (por exemplo, calcular a mensalidade)
+            var mensalidade = valorMensalidades * (1 + (taxaJuros / 100)) / semestre;
+
+            // Exibir o resultado
+            document.getElementById('resultado').innerHTML = "Sua mensalidade é: " + mensalidade.toFixed(2);
+        }
+                </script>
+               
+                <div id="result">
+
+                    <h4>Resultado:</h4>
+                    <span id="total">R$ 0.00</span>
+                     
+                
+                </div><!--resultado-->
+
+                <button id="calculate">
+                    Calcular
+                </button><!--calcular-->
+                
+            </div><!--w50-->
+            <div class="clear"></div>
+            <div class="w50 left"></div><!--w50-->
+        </div><!--center-->
+    </section><!--operacoes0-->
+
+    <section class="operacoes1">
+        <div class="center">
+            <h2 class="title">Calcular gastos com alimentação</h2>
+            <div class="w33 left box-calculadora">
+                <h3><i class="fa-brands fa-html5"></i></h3>
+                <h3>css3</h3>
+                <p>algo</p>
+            </div><!--box-calculadora-->
+            <div class="w33 left box-calculadora">
+                <h3><i class="fa-brands fa-html5"></i></h3>
+                <h3>css3</h3>
+                <p>algo</p>
+            </div><!--box-calculadora-->
+            <div class="w33 left box-calculadora">
+                <h3><i class="fa-brands fa-html5"></i></h3>
+                <h3>css3</h3>
+                <p>algo</p>
+            </div><!--box-calculadora-->
+        </div><!--center-->
+    </section><!--operacoes1-->
+
+    <section class="operacoes2">
+        <div class="center">
+            <div class="w50 left">
+                <h2 class="title">terceira operacao</h2>
+                <div class="operacao2-single">
+                    <p class="algo a ser visto">algo</p>
+                    <p class="nome-algo">algo2</p>
+                </div><!--operacao2-single-->
+            </div><!--w50-->
+            <div class="w50 left">
+                <h2 class="title">Serviços</h2>
+                <div class="servicos">
+                    <ul>
+                        <li>
+                            algo escrito
+                        </li>
+                    </ul>
+                </div><!--servicos-->
+            </div><!--w50-->
+            <div class="clear"></div>
+        </div><!--center-->
+    </section><!--operacoes2-->
+
+    <footer>
+        <div class="center">
+            <p>todos os direitos reservados</p>
+        </div><!--center-->
+    </footer>
+</body>
+
+</html>
